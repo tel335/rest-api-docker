@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf src && babel src --out-dir dist  --copy-files",
-    "start": "node src/index.js",
+    "build": "babel src --out-dir dist --copy-files",
+    "start": "babel src --out-dir dist --copy-files && node dist/index.js",
     "start:dev": "nodemon --exec babel-node src/index.js"
   },
   "author": "Francisco Cabezas",
@@ -23,7 +23,6 @@
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
     "@babel/preset-env": "^7.16.11",
-    "nodemon": "^2.0.15",
-    "rimraf": "^3.0.2"
+    "nodemon": "^2.0.15"
   }
 }
